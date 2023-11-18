@@ -9,3 +9,21 @@ if (burger && menu) {
         body.classList.toggle('_lock');
     })
 }
+
+
+const filter = document.querySelector('.property__filter');
+
+if (filter) {
+    const items = filter.querySelectorAll('.property__filter-block');
+
+    items.forEach(item => {
+        item.addEventListener('click', event => {
+            item.querySelector('.property__filter-dropdown').classList.toggle('_active');
+            item.querySelector('.property__filter-block-icon').classList.toggle('_active');
+    
+            if (event.target.classList.contains('property__filter-dropdown-item')) {
+                item.querySelector('.property__filter-block-value').textContent = event.target.textContent;
+            }
+        })
+    })
+}

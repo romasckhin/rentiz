@@ -18,6 +18,14 @@ ul {
   max-width: 100%;
 }
 
+.text {
+  color: var(--text-color);
+  font-family: Work Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
   background-color: var(--bg-color);
@@ -91,6 +99,7 @@ body._lock {
     top: 0;
     left: -100%;
     height: 100vh;
+    z-index: 10;
     width: 80%;
     flex-direction: column;
     justify-content: center;
@@ -180,5 +189,177 @@ body._lock {
 @media (any-hover: hover) {
   .register:hover {
     background-color: transparent;
+  }
+}
+
+.property {
+  margin-top: clamp(1.25rem, 0.25rem + 5vw, 4.688rem);
+}
+.property__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .property__container {
+    flex-direction: column;
+  }
+}
+.property__content {
+  flex: 0 0 49.2957746479%;
+  padding-bottom: 160px;
+}
+@media (max-width: 992px) {
+  .property__content {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+}
+.property__title {
+  color: #FFF;
+  font-family: Work Sans;
+  font-size: clamp(1.875rem, 1.184rem + 3.45vw, 4.25rem);
+  font-weight: 600;
+  line-height: 126%; /* 85.68px */
+  text-transform: capitalize;
+}
+.property__text {
+  margin-top: 18px;
+}
+.property__filter {
+  width: 885px;
+  height: 100px;
+  background: #FFF;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.3);
+  margin-top: 60px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 165px;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .property__filter {
+    width: 100%;
+    position: static;
+  }
+}
+@media (max-width: 576px) {
+  .property__filter {
+    padding: 15px 15px 10px 15px;
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 475px) {
+  .property__filter {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+.property__filter-block {
+  position: relative;
+}
+.property__filter-block:nth-child(2) {
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+}
+.property__img {
+  flex: 0 0 49.2957746479%;
+}
+.property__filter-btn {
+  padding: 5px;
+}
+.property__filter-btn button {
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: #FFF;
+  font-family: Work Sans;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+@media (any-hover: hover) {
+  .property__filter-btn button:hover {
+    background-color: #176e64;
+  }
+}
+@media (max-width: 576px) {
+  .property__filter-btn button {
+    padding: 5px;
+  }
+}
+@media (max-width: 576px) and (min-width: 475px) {
+  .property__filter-btn {
+    grid-column: 1/4;
+  }
+}
+.property__filter-button {
+  display: flex;
+  justify-content: center;
+  padding-left: clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem);
+  height: 100%;
+  flex-direction: column;
+  cursor: pointer;
+}
+.property__filter-block-header {
+  display: flex;
+  align-items: center;
+}
+.property__filter-block-type {
+  color: #858585;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 2px;
+}
+.property__filter-block-icon {
+  width: 9px;
+  height: 13px;
+  padding-right: 12px;
+  background: url("../img/icon/arrow-down.svg") center bottom no-repeat;
+  transition: transform 0.2s;
+}
+.property__filter-block-icon._active {
+  transform: rotate(180deg);
+}
+.property__filter-block-value {
+  color: #121B25;
+  font-family: Work Sans;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 126%; /* 22.68px */
+  text-transform: capitalize;
+}
+.property__filter-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  z-index: 3;
+  border: 1px solid var(--text-color);
+}
+.property__filter-dropdown._active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+.property__filter-dropdown-item {
+  padding: 10px;
+  transition: background-color 0.2s;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  .property__filter-dropdown-item:hover {
+    background-color: #dedede;
   }
 }/*# sourceMappingURL=style.css.map */
