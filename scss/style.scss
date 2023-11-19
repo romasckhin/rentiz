@@ -26,6 +26,15 @@ ul {
     line-height: 170%;
 }
 
+.title {
+    color: #FFF;
+    font-family: Work Sans;
+    font-size: clamp(1.875rem, 1.542rem + 1.67vw, 3rem);
+    font-weight: 600;
+    line-height: 126%;
+    text-transform: capitalize;
+}
+
 body {
     font-family: 'Work Sans', sans-serif;
     background-color: var(--bg-color);
@@ -224,7 +233,7 @@ body {
         padding-bottom: 160px;
         @media (max-width: 992px) {
             flex-direction: column;
-            padding-bottom: 40px;
+            padding-bottom: 20px;
         }
     }
 
@@ -247,7 +256,7 @@ body {
         height: 100px;
         background: #FFF;
         box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.30);
-        margin-top: 60px;
+        margin-top: clamp(2.5rem, 2.13rem + 1.85vw, 3.75rem);
         position: absolute;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 165px;
@@ -380,6 +389,35 @@ body {
                 background-color: #dedede;
             }
         }
+    }
+
+}
+
+// --------------- FEATURED ---------------
+
+.featured {
+
+    margin-top: clamp(2.5rem, -0.093rem + 12.96vw, 11.25rem);
+
+    &__container {
+
+    }
+
+    &__title {
+        
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        margin-top: clamp(1.563rem, 1.063rem + 2.5vw, 3.25rem);
+        overflow: auto;
+    }
+
+    &__icon {
+        flex: 0 0 auto; // запрещаем картинки уменьшаться
     }
 
 }
