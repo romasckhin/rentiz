@@ -29,8 +29,33 @@ if (filter) {
 }
 
 
+const swiper1 = new Swiper('.featured-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoplay: {
+        delay: 1500, 
+      },
 
-const swiper = new Swiper('.popular-slider', {
+      breakpoints: {
+        1200: {
+            slidesPerView: 5, 
+        },
+        992: {
+            slidesPerView: 4, 
+        },
+        660: {
+            slidesPerView: 3, 
+        },
+        460: {
+            slidesPerView: 2, 
+        }
+
+    }
+  });
+
+
+const swiper2 = new Swiper('.popular-slider', {
     spaceBetween: 20,
     slidesPerView: 1,
     navigation: {
@@ -46,5 +71,4 @@ const swiper = new Swiper('.popular-slider', {
             slidesPerView: 2, 
         }
     }
-
   });

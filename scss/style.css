@@ -376,16 +376,16 @@ body._lock {
 .featured {
   margin-top: clamp(2.5rem, -0.093rem + 12.96vw, 11.25rem);
 }
-.featured__box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  margin-top: clamp(1.563rem, 1.063rem + 2.5vw, 3.25rem);
-  overflow: auto;
-}
 .featured__icon {
   flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.featured-slider {
+  margin-top: clamp(1.563rem, 1.063rem + 2.5vw, 3.25rem);
 }
 
 .popular {

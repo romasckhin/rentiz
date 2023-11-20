@@ -407,19 +407,18 @@ body {
         
     }
 
-    &__box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
-        margin-top: clamp(1.563rem, 1.063rem + 2.5vw, 3.25rem);
-        overflow: auto;
-    }
-
     &__icon {
         flex: 0 0 auto; // запрещаем картинки уменьшаться
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
     }
 
+}
+
+.featured-slider {
+    margin-top: clamp(1.563rem, 1.063rem + 2.5vw, 3.25rem);
 }
 
 // --------------- POPULAR ---------------
