@@ -386,4 +386,128 @@ body._lock {
 }
 .featured__icon {
   flex: 0 0 auto;
+}
+
+.popular {
+  background: #1A242F url("/img/popular-bg/popular-bg.png") center center/cover no-repeat;
+  margin-top: clamp(2.5rem, -0.185rem + 13.43vw, 11.563rem);
+  padding: clamp(1.25rem, -1.343rem + 12.96vw, 10rem) 0;
+}
+.popular__slide {
+  margin-top: 40px;
+  position: relative;
+}
+.popular__slide-buttons {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 1800px) {
+  .popular__slide-buttons {
+    top: -100px;
+    right: 130px;
+    width: auto;
+  }
+}
+.popular__slide-btn {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: url("/img/icon/popular-icon/arrow-leftsvg.svg") center center no-repeat;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+@media (max-width: 660px) {
+  .popular__slide-btn {
+    display: none;
+  }
+}
+.popular__link {
+  text-align: center;
+}
+.popular__btn-link {
+  background-color: var(--accent-color);
+  padding: 22px 42px;
+  color: #FFF;
+  font-family: Work Sans;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 65px;
+  text-decoration: none;
+  display: inline-block;
+}
+@media (max-width: 660px) {
+  .popular__btn-link {
+    padding: 15px 35px;
+    font-size: 19px;
+  }
+}
+@media (any-hover: hover) {
+  .popular__btn-link:hover {
+    background-color: #176e64;
+  }
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: inline-flex;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: -130px;
+}
+@media (max-width: 1800px) {
+  .swiper-button-prev {
+    left: -80px;
+  }
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+  position: absolute;
+  right: -130px;
+}
+
+.popular-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 660px) {
+  .popular-slide {
+    text-align: center;
+  }
+}
+.popular-slide__title {
+  color: #FFF;
+  font-family: Work Sans;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 126%;
+  letter-spacing: 0.26px;
+  text-transform: capitalize;
+}
+.popular-slide__labels {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 660px) {
+  .popular-slide__labels {
+    justify-content: center;
+  }
+}
+.popular-slide__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }/*# sourceMappingURL=style.css.map */
