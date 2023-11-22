@@ -505,7 +505,7 @@ body {
     display: inline-flex;
 }
 
-.swiper-button-prev {
+.prev {
     position: absolute;
     left: -130px;
     @media (max-width: 1800px) {
@@ -513,7 +513,7 @@ body {
     }
 }
 
-.swiper-button-next {
+.next {
     transform: rotate(180deg);
     position: absolute;
     right: -130px;
@@ -622,5 +622,93 @@ body {
 
     &__item-text {
       
+    }
+}
+
+// --------------- REVIEWS ---------------
+
+.reviews {
+
+    padding-bottom: clamp(6.25rem, 4.769rem + 7.41vw, 11.25rem);
+
+    &__container {
+        max-width: 1020px;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 160px;
+    }
+
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: var(--accent-color);
+        font-family: Work Sans;
+        font-size: 260px;
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+        
+    }
+
+    &__slide-text {
+        color: #FFF;
+        font-family: Work Sans;
+        font-size: clamp(1.25rem, 1.028rem + 1.11vw, 2rem);
+        font-weight: 400;
+        line-height: 157%; /* 50.24px */
+        text-transform: capitalize;
+    }
+
+    &__slide-info {
+        margin-top: 40px;
+        position: relative;
+    }
+
+    &__slide-name {
+        color: #FFF;
+        font-family: Work Sans;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.22px;
+        text-transform: capitalize;
+    }
+
+    &__slide-job {
+        color: #D6D6D6;
+        font-family: Work Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 170%; /* 30.6px */
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            background: #353F49;
+            width: 1px;
+        }
+    }
+
+    &__btn {
+        font-size: 50px;
+        cursor: pointer;
+        &.swiper-button-disabled {
+            color: #767f76
+        }
     }
 }

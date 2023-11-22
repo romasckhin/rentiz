@@ -72,3 +72,11 @@ const swiper2 = new Swiper('.popular-slider', {
         }
     }
   });
+
+const swiper3 = new Swiper('.reviews__slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
