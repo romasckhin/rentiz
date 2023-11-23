@@ -80,3 +80,18 @@ const swiper3 = new Swiper('.reviews__slider', {
       prevEl: '.swiper-button-prev',
     },
   });
+
+
+const galleryItem = document.querySelectorAll('.gallery__item');
+
+if (galleryItem.length > 0) {
+    galleryItem.forEach(item => {
+        new Swiper(item, {
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000,
+            },
+            effect: 'fade',
+        })
+    })
+}
