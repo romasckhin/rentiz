@@ -787,3 +787,56 @@ body {
             }
 
 }
+
+// ---------------  BEGIN ---------------
+
+.begin {
+    margin: 0 auto;
+    padding: clamp(2.5rem, -0.093rem + 12.96vw, 11.25rem) 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: clamp(1.875rem, -0.162rem + 10.19vw, 8.75rem);
+        max-width: 1237px;
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+
+    }
+
+    &__info {
+        
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__link {
+        padding: 22px 42px;
+        background-color: var(--accent-color);
+        text-decoration: none;
+        color: #FFF;
+        font-family: Work Sans;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: capitalize;
+        cursor: pointer;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #176e64;
+            }
+        }
+        @media (max-width: 660px)
+         {
+            padding: 15px 35px;
+            font-size: 19px;
+        }
+            
+    }
+
+}
